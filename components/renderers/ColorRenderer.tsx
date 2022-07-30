@@ -24,11 +24,7 @@ const ColorRenderer: FC<Props> = ({ color, id }) => {
         return setColorString(Renderer.render());
       }
     });
-  }, [color]);
-
-  useEffect(() => {
-    console.log(`${id} ${colorString}`);
-  }, [colorString]);
+  }, [color, RendererCollection]);
 
   return (
     <div

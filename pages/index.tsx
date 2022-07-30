@@ -70,8 +70,12 @@ const Home: NextPage = () => {
             >
               <option value="ANY">Any</option>
               {types &&
-                types.map((type) => {
-                  return <option value={type}>Only {type}</option>;
+                types.map((type, index) => {
+                  return (
+                    <option key={index} value={type}>
+                      Only {type}
+                    </option>
+                  );
                 })}
             </select>
           </div>
